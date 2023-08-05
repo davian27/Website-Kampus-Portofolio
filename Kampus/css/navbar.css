@@ -5,7 +5,7 @@ body{
 
 header{
     z-index: 99;
-    background-image: url('/Kampus/img/kota.jpeg');
+    background-image: url('/img/kota.jpeg');
     background-size: cover;
     background-position: center;
     height: 120vh;
