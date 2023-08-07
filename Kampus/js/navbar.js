@@ -24,7 +24,7 @@ window.addEventListener('scroll', function() {
   
   window.addEventListener('scroll', () => {
     const navbar = document.getElementById('navbar');
-    var navLinks = document.querySelectorAll(".navbar ul a")
+    const navLinks = document.querySelectorAll(".navbar ul a")
     const sections = document.querySelectorAll('section');
     const windowHeight = window.innerHeight;
     const quarterWindowHeight = windowHeight * 0.60;
@@ -57,7 +57,7 @@ window.addEventListener('scroll', function() {
     });
   
     // Event listener untuk smooth scroll saat tautan di klik
-    navbar.forEach(link => {
+    navLinks.forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
         const targetId = link.getAttribute('href').substring(1);
