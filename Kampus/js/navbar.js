@@ -24,6 +24,7 @@ window.addEventListener('scroll', function() {
   
   window.addEventListener('scroll', () => {
     const navbar = document.getElementById('navbar');
+    var navLinks = document.querySelectorAll(".navbar ul a")
     const sections = document.querySelectorAll('section');
     const windowHeight = window.innerHeight;
     const quarterWindowHeight = windowHeight * 0.60;
@@ -35,28 +36,28 @@ window.addEventListener('scroll', function() {
       const sectionId = section.getAttribute('id');
       const navLink = navbar.querySelector(`a[href="#${sectionId}"]`);
   
-      if (currentPos >= sectionTop && currentPos < sectionTop + sectionHeight) {
-        navLink.classList.add('active');
-      } else {
-        navLink.classList.remove('active');
-      }
+      // if (currentPos >= sectionTop && currentPos < sectionTop + sectionHeight) {
+      //   navLink.classList.add('active');
+      // } else {
+      //   navLink.classList.remove('active');
+      // }
     });
   });
   
-  // window.addEventListener('DOMContentLoaded', () => {
-  //   const navbar = document.getElementById('navbar');
-  //   const navLinks = navbar.querySelectorAll('a[href^="#"]');
-  //   const sections = document.querySelectorAll('section');
+  window.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.getElementById('navbar');
+    const navLinks = navbar.querySelectorAll('a[href^="#"]');
+    const sections = document.querySelectorAll('section');
   
-  //   // Tambahkan kelas 'active' pada tautan navigasi '#home'
-  //   navLinks.forEach(link => {
-  //     if (link.getAttribute('href') === '#home') {
-  //       link.classList.add('active');
-  //     }
-  //   });
+    // Tambahkan kelas 'active' pada tautan navigasi '#home'
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === '#home') {
+        link.classList.add('active');
+      }
+    });
   
     // Event listener untuk smooth scroll saat tautan di klik
-    navLinks.forEach(link => {
+    navbar.forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
         const targetId = link.getAttribute('href').substring(1);
@@ -83,3 +84,4 @@ window.addEventListener('scroll', function() {
         hamburgerCheckbox.checked = false;
       }
     });
+  });
