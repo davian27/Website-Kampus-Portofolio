@@ -43,17 +43,17 @@ window.addEventListener('scroll', function() {
     });
   });
   
-  window.addEventListener('DOMContentLoaded', () => {
-    const navbar = document.getElementById('navbar');
-    const navLinks = navbar.querySelectorAll('a[href^="#"]');
-    const sections = document.querySelectorAll('section');
+  // window.addEventListener('DOMContentLoaded', () => {
+  //   const navbar = document.getElementById('navbar');
+  //   const navLinks = navbar.querySelectorAll('a[href^="#"]');
+  //   const sections = document.querySelectorAll('section');
   
-    // Tambahkan kelas 'active' pada tautan navigasi '#home'
-    navLinks.forEach(link => {
-      if (link.getAttribute('href') === '#home') {
-        link.classList.add('active');
-      }
-    });
+  //   // Tambahkan kelas 'active' pada tautan navigasi '#home'
+  //   navLinks.forEach(link => {
+  //     if (link.getAttribute('href') === '#home') {
+  //       link.classList.add('active');
+  //     }
+  //   });
   
     // Event listener untuk smooth scroll saat tautan di klik
     navLinks.forEach(link => {
@@ -83,4 +83,3 @@ window.addEventListener('scroll', function() {
         hamburgerCheckbox.checked = false;
       }
     });
-  });
